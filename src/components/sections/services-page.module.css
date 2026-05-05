@@ -3,40 +3,62 @@
    ============================================================ */
 
 .hero {
-  padding: 7rem 1.25rem 6rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.25fr 1.1fr;
-  column-gap: 4rem;
-  row-gap: 2.5rem;
-  align-items: end;
+    padding: 7rem 1.25rem 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.25fr 1.1fr;
+    column-gap: 4rem;
+    row-gap: 1.5rem;
+    align-items: end;
+}
+
+.heroEyebrow {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.heroEyebrow::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background-color: var(--border-strong);
+    flex-shrink: 0;
 }
 
 .heroTitle {
-  grid-column: 1;
-  grid-row: 1;
-  font-family: var(--font-logo);
-  font-size: clamp(2.75rem, 5.5vw, 5rem);
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.02;
-  color: var(--text-primary);
-  margin: 0;
+    grid-column: 1;
+    grid-row: 2;
+    font-family: var(--font-logo);
+    font-size: clamp(2.75rem, 5.5vw, 5rem);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+    color: var(--text-primary);
+    margin: 0;
 }
 
 .heroBody {
-  grid-column: 2;
-  grid-row: 2;
-  max-width: 620px;
-  font-family: var(--font-logo);
-  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.32;
-  color: var(--text-primary);
-  margin: 0;
-  justify-self: end;
+    grid-column: 2;
+    grid-row: 2;
+    max-width: 620px;
+    font-family: var(--font-logo);
+    font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.32;
+    color: var(--text-primary);
+    margin: 0;
+    justify-self: end;
 }
 
 /* ============================================================
@@ -44,9 +66,9 @@
    ============================================================ */
 
 .divider {
-  width: 100%;
-  height: 1px;
-  background-color: var(--border-subtle);
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-subtle);
 }
 
 /* ============================================================
@@ -54,141 +76,145 @@
    ============================================================ */
 
 .serviceSection {
-  position: relative;
-  padding: 7rem 0;
-  width: 100%;
+    position: relative;
+    padding: 7rem 0;
+    width: 100%;
 }
 
 .serviceBackdrop {
-  position: absolute;
-  top: 3rem;
-  bottom: 3rem;
-  left: 50%;
-  width: calc(100vw - 100px);
-  transform: translateX(-50%) scale(0.98);
-  border-radius: var(--radius-lg);
-  background-color: var(--brand-orange);
-  opacity: 0;
-  transition: opacity 1.1s var(--ease-smooth), transform 1.1s var(--ease-smooth);
-  pointer-events: none;
-  z-index: 0;
+    position: absolute;
+    top: 3rem;
+    bottom: 3rem;
+    left: 50%;
+    width: calc(100vw - 100px);
+    transform: translateX(-50%) scale(0.98);
+    border-radius: var(--radius-lg);
+    background-color: var(--brand-orange);
+    opacity: 0;
+    transition:
+        opacity 1.1s var(--ease-smooth),
+        transform 1.1s var(--ease-smooth);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .serviceBackdropInView {
-  opacity: 0.05;
-  transform: translateX(-50%) scale(1);
+    opacity: 0.05;
+    transform: translateX(-50%) scale(1);
 }
 
 .serviceContent {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 4rem;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4rem;
 }
 
 .serviceHeadline {
-  font-family: var(--font-logo);
-  font-size: clamp(4.5rem, 13.5vw, 12.5rem);
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 0.92;
-  color: var(--text-primary);
-  margin: 0 0 4rem;
+    font-family: var(--font-logo);
+    font-size: clamp(4.5rem, 13.5vw, 12.5rem);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 0.92;
+    color: var(--text-primary);
+    margin: 0 0 4rem;
 }
 
 .serviceGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
 }
 
 .serviceBody {
-  font-family: var(--font-logo);
-  font-size: clamp(1.4rem, 2.2vw, 1.95rem);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-  color: var(--text-primary);
-  max-width: 520px;
-  margin: 0;
+    font-family: var(--font-logo);
+    font-size: clamp(1.4rem, 2.2vw, 1.95rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--text-primary);
+    max-width: 520px;
+    margin: 0;
 }
 
 /* ---- Capability list ---- */
 .capabilityList {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-subtle);
 }
 
 .capabilityRow {
-  position: relative;
-  display: grid;
-  grid-template-columns: 4rem 1fr;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.35rem 0.5rem;
-  border-bottom: 1px solid var(--border-subtle);
-  cursor: none;
-  color: inherit;
-  text-decoration: none;
-  transition: border-bottom-color var(--transition-base);
+    position: relative;
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.35rem 0.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+    cursor: none;
+    color: inherit;
+    text-decoration: none;
+    transition: border-bottom-color var(--transition-base);
 }
 
 .capabilityRow:hover {
-  z-index: 5;
-  border-bottom-color: var(--text-primary);
+    z-index: 5;
+    border-bottom-color: var(--text-primary);
 }
 
 .capabilityNumber {
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--text-muted);
-  font-family: var(--font-primary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    font-family: var(--font-primary);
 }
 
 .capabilityLabel {
-  font-family: var(--font-logo);
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  transition: transform var(--transition-base);
+    font-family: var(--font-logo);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    transition: transform var(--transition-base);
 }
 
 .capabilityRow:hover .capabilityLabel {
-  transform: translateX(0.35rem);
+    transform: translateX(0.35rem);
 }
 
 /* ---- Circle arrow cursor ---- */
 .rowArrow {
-  position: absolute;
-  width: 72px;
-  height: 72px;
-  border-radius: 9999px;
-  background-color: var(--brand-orange);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.5);
-  transition: opacity 0.18s ease, transform 0.18s ease;
-  pointer-events: none;
-  z-index: 10;
-  will-change: left, top;
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    border-radius: 9999px;
+    background-color: var(--brand-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease;
+    pointer-events: none;
+    z-index: 10;
+    will-change: left, top;
 }
 
 .rowArrow svg {
-  width: 24px;
-  height: 24px;
-  color: #111;
+    width: 24px;
+    height: 24px;
+    color: #111;
 }
 
 .rowArrowVisible {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* ============================================================
@@ -196,82 +222,88 @@
    ============================================================ */
 
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
-  }
+    .hero {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
 
-  .heroTitle {
-    grid-column: 1;
-  }
+    .heroEyebrow {
+        grid-column: 1;
+        grid-row: 1;
+    }
 
-  .heroBody {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: start;
-  }
+    .heroTitle {
+        grid-column: 1;
+        grid-row: 2;
+    }
 
-  .serviceContent {
-    padding: 0 1.25rem;
-  }
+    .heroBody {
+        grid-column: 1;
+        grid-row: 3;
+        justify-self: start;
+    }
 
-  .serviceGrid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
+    .serviceContent {
+        padding: 0 1.25rem;
+    }
 
-  .capabilityList {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .serviceGrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
 
-  .serviceHeadline {
-    margin-bottom: 1.5rem;
-    font-size: clamp(3.5rem, 10vw, 10rem);
-  }
+    .capabilityList {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-  .serviceBody {
-    font-size: clamp(1.1rem, 1.8vw, 1.65rem);
-  }
+    .serviceHeadline {
+        margin-bottom: 1.5rem;
+        font-size: clamp(3.5rem, 10vw, 10rem);
+    }
 
-  .heroBody {
-    font-size: clamp(1.2rem, 2vw, 1.75rem);
-  }
+    .serviceBody {
+        font-size: clamp(1.1rem, 1.8vw, 1.65rem);
+    }
 
-  .rowArrow {
-    display: none !important;
-  }
+    .heroBody {
+        font-size: clamp(1.2rem, 2vw, 1.75rem);
+    }
+
+    .rowArrow {
+        display: none !important;
+    }
 }
 
 @media (max-width: 600px) {
-  .hero {
-    padding: 5rem 1.25rem 3rem;
-  }
+    .hero {
+        padding: 5rem 1.25rem 3rem;
+    }
 
-  .serviceSection {
-    padding: 4rem 1.25rem;
-  }
+    .serviceSection {
+        padding: 4rem 1.25rem;
+    }
 
-  .serviceBackdrop {
-    width: calc(100vw - 8px);
-    top: 1rem;
-    bottom: 1rem;
-  }
+    .serviceBackdrop {
+        width: calc(100vw - 8px);
+        top: 1rem;
+        bottom: 1rem;
+    }
 
-  .capabilityRow {
-    grid-template-columns: 3rem 1fr;
-    gap: 1rem;
-    padding: 1.1rem 0.25rem;
-  }
+    .capabilityRow {
+        grid-template-columns: 3rem 1fr;
+        gap: 1rem;
+        padding: 1.1rem 0.25rem;
+    }
 
-  .rowArrow {
-    width: 56px;
-    height: 56px;
-  }
+    .rowArrow {
+        width: 56px;
+        height: 56px;
+    }
 
-  .rowArrow svg {
-    width: 20px;
-    height: 20px;
-  }
+    .rowArrow svg {
+        width: 20px;
+        height: 20px;
+    }
 }

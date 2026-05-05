@@ -4,6 +4,7 @@ import {
   ServiceSection,
 } from "@/components/sections/ServicesPage";
 import CallToAction from "@/components/sections/CallToAction";
+import StartupVelocity from "@/components/sections/StartupVelocity";
 import Pricing from "@/components/sections/Pricing";
 import styles from "@/components/sections/services-page.module.css";
 
@@ -80,6 +81,7 @@ export default function ServicesPage() {
       {SERVICES.map((service) => (
         <ServiceSection key={service.headline} {...service} />
       ))}
+      <StartupVelocity />
       <Pricing />
       <CallToAction href="/start" />
     </main>

@@ -7,11 +7,13 @@ import styles from "./services-page.module.css";
 export function ServicesHero() {
   return (
     <div className={styles.hero}>
-      <h1 className={styles.heroTitle}>
-        One craftsman. End-to-end.
-      </h1>
+      <div style={{ gridColumn: 1, gridRow: 1 }}>
+        <div className={styles.heroEyebrow}>Services</div>
+        <h1 className={styles.heroTitle}>One craftsman. End-to-end.</h1>
+      </div>
       <p className={styles.heroBody}>
-        I bring strategy, design and development together for the creative execution of your vision into a world class digital experience.
+        I bring strategy, design and development together for the creative
+        execution of your vision into a world class digital experience.
       </p>
     </div>
   );
@@ -26,14 +28,29 @@ interface ServiceSectionProps {
 
 function ArrowIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <line x1="7" y1="17" x2="17" y2="7" />
       <polyline points="7 7 17 7 17 17" />
     </svg>
   );
 }
 
-function CapabilityRow({ number, label, href }: { number: string; label: string; href: string }) {
+function CapabilityRow({
+  number,
+  label,
+  href,
+}: {
+  number: string;
+  label: string;
+  href: string;
+}) {
   const rowRef = useRef<HTMLAnchorElement>(null);
   const arrowRef = useRef<HTMLSpanElement>(null);
   const [hovered, setHovered] = useState(false);
@@ -67,7 +84,12 @@ function CapabilityRow({ number, label, href }: { number: string; label: string;
   );
 }
 
-export function ServiceSection({ headline, href, body, capabilities }: ServiceSectionProps) {
+export function ServiceSection({
+  headline,
+  href,
+  body,
+  capabilities,
+}: ServiceSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [inView, setInView] = useState(false);
 
@@ -89,7 +111,10 @@ export function ServiceSection({ headline, href, body, capabilities }: ServiceSe
       ref={sectionRef}
       className={`${styles.serviceSection} ${inView ? styles.serviceSectionInView : ""}`}
     >
-      <div className={`${styles.serviceBackdrop} ${inView ? styles.serviceBackdropInView : ""}`} aria-hidden="true" />
+      <div
+        className={`${styles.serviceBackdrop} ${inView ? styles.serviceBackdropInView : ""}`}
+        aria-hidden="true"
+      />
       <div className={styles.serviceContent}>
         <h2 className={styles.serviceHeadline}>{headline}</h2>
         <div className={styles.serviceGrid}>

@@ -5,6 +5,7 @@ import AboutStats from "@/components/sections/AboutStats";
 import AboutBio from "@/components/sections/AboutBio";
 import Philosophy from "@/components/sections/Philosophy";
 import AboutGlobal from "@/components/sections/AboutGlobal";
+import StartupVelocity from "@/components/sections/StartupVelocity";
 import CallToAction from "@/components/sections/CallToAction";
 import aboutContent from "../../../content/about.json";
 
@@ -14,7 +15,7 @@ export default function AboutPageContent({ content }: { content?: any }) {
 
   return (
     <main>
-      <AboutHero 
+      <AboutHero
         title={hero.title}
         subtitle={hero.subtitle}
         image={hero.image}
@@ -22,8 +23,9 @@ export default function AboutPageContent({ content }: { content?: any }) {
 
       <AboutStats stats={stats} />
       <AboutBio bio={bio} />
-      
+
       <Philosophy />
+      <StartupVelocity />
 
       <CallToAction href="/start" />
 
