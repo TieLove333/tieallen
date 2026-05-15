@@ -29,10 +29,10 @@ export default function AllenEstates() {
       {/* Intro */}
       <CaseStudyIntro
         headline="Crafting a curated luxury brand and high-end digital presence for a portfolio of exclusive private residences."
-        description="Allen Estates represents a hand-selected collection of private estates in the world's most prestigious four-season locations. The project scope centered around establishing a refined brand identity and building a seamless, immersive website to showcase their meticulously equipped escapes and 24/7 private estate concierge service."
+        description="Allen Estates represents a hand-selected collection of private estates in exclusive locations. The project scope centered around establishing a refined brand identity and building a seamless, immersive website showcasing their meticulously equipped escapes and selling the Allen Estates experience."
         client="Allen Estates"
         industry="Luxury Real Estate / Hospitality"
-        timeline="2024"
+        timeline="4 Weeks"
       />
 
       {/* Website showcase hero over blurred bg */}
