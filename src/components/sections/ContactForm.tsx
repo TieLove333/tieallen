@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./contact-form.module.css";
 
 const HEAR_OPTIONS = [
@@ -100,9 +100,14 @@ Newsletter Opt-in: ${newsletter ? "Yes" : "No"}
               Message sent{name ? `, ${name.split(" ")[0]}` : ""}!
             </h3>
             <p className={styles.successText}>
-              I&apos;ll review your message and get back to you within one business day.
+              I&apos;ll review your message and get back to you within one business day. If you want to discuss a custom build, you can also book a discovery call directly.
             </p>
-            <GooeyButton label="Back to home" href="/" size="md" />
+            <div style={{ display: "flex", gap: "1.5rem", alignItems: "center", marginTop: "0.5rem" }}>
+              <Button label="Book a Discovery Call" href="/book" size="md" />
+              <a href="/" className={styles.emailLink} style={{ textDecoration: "underline", fontSize: "0.95rem" }}>
+                Back to home
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -118,7 +123,7 @@ Newsletter Opt-in: ${newsletter ? "Yes" : "No"}
             Have a general question or just want to say hi? Drop me a message and I&apos;ll get back to you shortly. If you&apos;re ready to kick off a new project, the project planner is the best place to start.
           </p>
 
-          <GooeyButton label="Go to Project Planner" href="/start" size="md" />
+          <Button label="Go to Project Planner" href="/start" size="md" />
 
           <div className={styles.emailFallback}>
             <span className={styles.emailLabel}>Hate contact forms?</span>
@@ -209,7 +214,7 @@ Newsletter Opt-in: ${newsletter ? "Yes" : "No"}
 
             {error && <p className={styles.errorMsg}>{error}</p>}
 
-            <GooeyButton
+            <Button
               label={sending ? "Sending…" : "Send Message"}
               size="lg"
               variant="dark"

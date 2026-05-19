@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./ventures-page.module.css";
 
 export function VenturesHero() {
@@ -119,7 +119,7 @@ export function VentureSection({ label, headline, body, info, image, primaryCTA,
             
             <div className={styles.ctaGroup}>
               {primaryCTA && (
-                <GooeyButton 
+                <Button 
                   label={primaryCTA.label} 
                   href={primaryCTA.href} 
                   target={primaryCTA.external ? "_blank" : undefined}

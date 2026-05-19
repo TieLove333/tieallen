@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./home-hero.module.css";
 
 export default function HomeHero() {
@@ -43,13 +43,14 @@ export default function HomeHero() {
 
             <h1 className={styles.homeHeroTitle}>
               <span className={`${styles.titleLine} ${styles.titleLineBold}`}>Concept to scale.</span>
-              <span className={styles.titleLine}>Design for where you're going.</span>
-              <span className={styles.titleLine}>Systems that take you there.</span>
+              <span className={styles.titleLine}>
+                One craftsman. Brand, web, and product - end-to-end, at startup velocity.
+              </span>
             </h1>
 
             {/* Buttons */}
             <div className={styles.homeHeroButtons}>
-              <GooeyButton label="See my work" href="/work" />
+              <Button label="See my work" href="/work" />
               <a href="/start" className={styles.textButton}>
                 Start<span className={styles.mobileHide}> your project</span>
                 <svg className={styles.textButtonArrow} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

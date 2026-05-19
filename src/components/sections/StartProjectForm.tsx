@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./start-project-form.module.css";
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -74,6 +74,13 @@ function Step1({
   return (
     <div className={styles.stepContent}>
       <h1 className={styles.stepTitle}>The basics</h1>
+
+      <p className={styles.alternateCta}>
+        Just want to schedule a quick chat first?{" "}
+        <a href="/book" className={styles.alternateLink}>
+          Skip and book a discovery call
+        </a>
+      </p>
 
       <div className={styles.fields}>
         <FloatField label="Name" value={data.name} onChange={(v) => onChange("name", v)} />
@@ -258,12 +265,12 @@ function SuccessScreen({ name }: { name: string }) {
     <div className={styles.successScreen}>
       <div className={styles.successIcon}>✓</div>
       <h2 className={styles.successTitle}>
-        You&apos;re in{name ? `, ${name.split(" ")[0]}` : ""}!
+        Awesome, you&apos;re in{name ? `, ${name.split(" ")[0]}` : ""}!
       </h2>
       <p className={styles.successText}>
-        Enquiry received - I&apos;ll review the details and come back to you within one business day.
+        I have received your project breakdown. Let&apos;s schedule your 15-minute discovery call to align on scope, deliverables, and next steps.
       </p>
-      <GooeyButton label="Back to home" href="/" size="lg" />
+      <Button label="Schedule Discovery Call" href="/book" size="lg" />
     </div>
   );
 }
@@ -436,9 +443,9 @@ Project Brief: ${formData.brief ? formData.brief.name : "None uploaded"}
         )}
 
         {step < TOTAL_STEPS ? (
-          <GooeyButton label="Next Step" size="lg" onClick={handleNext} />
+          <Button label="Next Step" size="lg" onClick={handleNext} />
         ) : (
-          <GooeyButton
+          <Button
             label={sending ? "Sending…" : "Send Enquiry"}
             size="lg"
             onClick={handleSubmit}

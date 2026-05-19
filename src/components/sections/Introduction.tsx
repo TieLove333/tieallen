@@ -54,7 +54,7 @@ export default function Introduction() {
 
         {/* Description Text */}
         <p className={styles.description}>
-          With over 15 years of industry expertise, I specialize in transforming chaos into order—elevating ambitious ideas into high-impact brands and world-class digital experiences.
+          With over 18 years of industry expertise, I specialize in transforming chaos into order—elevating ambitious ideas into high-impact brands and world-class digital experiences.
         </p>
 
         {/* Call to Action */}

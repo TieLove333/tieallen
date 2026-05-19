@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useCallback } from "react";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./footer.module.css";
 
 function InstagramIcon() {
@@ -63,7 +63,7 @@ export default function Footer() {
                 <br />
                 work with me?
               </h2>
-              <GooeyButton label="Start a project" href="/start" />
+              <Button label="Start a project" href="/start" />
             </div>
 
             <div className={styles.footerRight}>

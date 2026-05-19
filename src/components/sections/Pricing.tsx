@@ -28,7 +28,7 @@ const tiers: PricingTier[] = [
     priceSuffix: "one-time",
     description: (
       <>
-        <strong>I bring your vision to life. There is pretty much no limits.</strong> Brand design, UI/UX, high-end web design, marketing funnels and custom platforms from the ground up.
+        <strong>I bring your vision to life. There are no limits.</strong> Brand design, UI/UX, high-end web design, marketing funnels and custom platforms from the ground up.
       </>
     ),
     features: [

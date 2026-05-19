@@ -1,6 +1,6 @@
 "use client";
 
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./service-breakdown.module.css";
 
 type BreakdownItem = {
@@ -30,7 +30,7 @@ export default function ServiceBreakdown({ headline, subhead, items, cta }: Serv
           </div>
           {cta && (
             <div className={styles.headerRight}>
-              <GooeyButton label={cta.label} href={cta.href} />
+              <Button label={cta.label} href={cta.href} />
             </div>
           )}
         </div>

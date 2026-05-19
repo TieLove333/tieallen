@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./home-testimonial-card.module.css";
 
 const IMAGES = [
@@ -71,7 +71,7 @@ export default function HomeTestimonialCard({
 
           {/* CTA notch: Bottom-right */}
           <div className={styles.ctaNotch}>
-            <GooeyButton label="View Project" href="/work/bch-devcon" size="sm" />
+            <Button label="View Project" href="/work/bch-devcon" size="sm" />
           </div>
         </div>
       </div>

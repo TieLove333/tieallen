@@ -6,7 +6,7 @@ import StartupVelocity from "@/components/sections/StartupVelocity";
 import HomeFeaturedTestimonial from "@/components/sections/HomeFeaturedTestimonial";
 import FAQ from "@/components/sections/FAQ";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
-import Pricing from "@/components/sections/Pricing";
+import PricingV2 from "@/components/sections/PricingV2";
 import AboutBio from "@/components/sections/AboutBio";
 import ClientRoster from "@/components/sections/ClientRoster";
 import CallToAction from "@/components/sections/CallToAction";
@@ -23,7 +23,7 @@ export default function Home() {
       <HomeServices />
       <StartupVelocity />
       <CallToAction href="/start" />
-      <Pricing />
+      <PricingV2 />
       <AboutBio />
       <FAQ />
     </>

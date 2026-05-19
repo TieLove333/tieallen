@@ -1,5 +1,5 @@
 import Image from "next/image";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./about-bio.module.css";
 
 export default function AboutBio({ bio }: { bio?: any }) {
@@ -19,7 +19,7 @@ export default function AboutBio({ bio }: { bio?: any }) {
           </p>
 
           <div className={styles.ctaWrap}>
-            <GooeyButton label="About Me" href="/about" />
+            <Button label="About Me" href="/about" />
           </div>
         </div>
 

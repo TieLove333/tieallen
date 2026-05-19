@@ -1,5 +1,5 @@
 import Image from "next/image";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./service-image-split.module.css";
 
 type ServiceImageSplitProps = {
@@ -68,7 +68,7 @@ export default function ServiceImageSplit({
           </ul>
 
           <div className={styles.ctaWrap}>
-            <GooeyButton label={cta.label} href={cta.href} />
+            <Button label={cta.label} href={cta.href} />
           </div>
         </div>
 

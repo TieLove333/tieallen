@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import WordCloudReveal from "@/components/ui/WordCloudReveal";
 import styles from "./service-page-hero.module.css";
 
@@ -48,7 +48,7 @@ export default function ServicePageHero({
 
             {/* Buttons */}
             <div className={`${styles.servicePageHeroButtons} ${align === "left" ? styles.buttonsLeft : ""}`}>
-              <GooeyButton label={primaryCta.label} href={primaryCta.href} icon={primaryCta.icon} />
+              <Button label={primaryCta.label} href={primaryCta.href} icon={primaryCta.icon} />
               <a href={secondaryCta.href} className={styles.textButton}>
                 {secondaryCta.label === "Start your project" ? (
                   <>Start<span className={styles.mobileHide}> your project</span></>

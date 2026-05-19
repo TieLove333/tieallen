@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./about-global.module.css";
 
 function Globe() {
@@ -137,7 +137,7 @@ export default function AboutGlobal() {
             </p>
 
             <div className={styles.buttonWrapper}>
-              <GooeyButton label="Start a project" href="/start" />
+              <Button label="Start a project" href="/start" />
             </div>
           </div>
 

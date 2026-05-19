@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useCallback } from "react";
 import Link from "next/link";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./header.module.css";
 
 const SERVICES = [
@@ -395,7 +395,7 @@ export default function Header() {
                           One craftsman. End-to-end.
                         </span>
                       </div>
-                      <GooeyButton label="View all" />
+                      <Button label="View all" />
                     </Link>
                   </div>
                 </div>
@@ -544,7 +544,7 @@ export default function Header() {
               className={styles.desktopCta}
               style={{ position: "relative", zIndex: 10 }}
             >
-              <GooeyButton label="Start a project" href="/start" />
+              <Button label="Start a project" href="/start" variant="dark" size="sm" />
             </div>
 
             <button
@@ -745,7 +745,7 @@ export default function Header() {
           </Link>
 
           <div className={styles.mobileCta}>
-            <GooeyButton label="Start a project" href="/start" />
+            <Button label="Start a project" href="/start" variant="dark" />
           </div>
         </div>
       </div>

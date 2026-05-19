@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import GooeyButton from "@/components/ui/GooeyButton";
+import Button from "@/components/ui/Button";
 import styles from "./home-services.module.css";
 
 interface Service {
@@ -124,7 +124,7 @@ function ServiceRow({ service, isActive, onHover }: {
           <div className={styles.imageAccent} aria-hidden="true" />
           {/* Bottom-right CTA notch */}
           <div className={styles.imageCtaNotch}>
-            <GooeyButton label="Learn More" href={service.href} size="sm" />
+            <Button label="Learn More" href={service.href} size="sm" />
           </div>
         </div>
       </div>

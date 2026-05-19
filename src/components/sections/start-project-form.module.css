@@ -422,3 +422,24 @@
   max-width: 400px;
   line-height: 1.6;
 }
+
+/* Alternate skip-to-booking CTA */
+.alternateCta {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: -1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.alternateLink {
+  color: var(--brand-orange, #ff6b00);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.alternateLink:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}

@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { GooeyFilter } from "@/components/ui/GooeyButton";
+
 import styles from "@/components/layout/layout.module.css";
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export default function RootLayout({
           data-vizon-tracking="94db9f1451895f07bad80546"
           strategy="afterInteractive"
         />
-        <GooeyFilter />
+        
         <div id="page-wrapper" className={styles.pageWrapper}>
           <Header />
           <div id="page-content" className={styles.pageContent}>
