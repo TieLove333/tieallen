@@ -144,7 +144,6 @@ export default function PricingV2() {
         <div className={styles.topNotch} aria-hidden="true" />
 
         <div className={styles.pricingHeader}>
-          <span className={styles.eyebrow}>Pricing</span>
           <h2 className={styles.pricingTitle}>
             <span className={styles.pricingTitleBold}>Transparent services.</span>
             <span className={styles.pricingTitleAccent}>Zero surprises.</span>

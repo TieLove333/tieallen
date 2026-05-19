@@ -127,6 +127,10 @@
   letter-spacing: -0.05em;
 }
 
+.titleLine:not(.titleLineBold) {
+  font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+}
+
 /* Stepped notch after each line except the last */
 .titleLine:not(:last-child)::after {
   content: "";

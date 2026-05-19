@@ -123,7 +123,7 @@ Newsletter Opt-in: ${newsletter ? "Yes" : "No"}
             Have a general question or just want to say hi? Drop me a message and I&apos;ll get back to you shortly. If you&apos;re ready to kick off a new project, the project planner is the best place to start.
           </p>
 
-          <Button label="Go to Project Planner" href="/start" size="md" />
+          <Button label="Go to Project Planner" href="/start" size="md" className={styles.plannerBtn} />
 
           <div className={styles.emailFallback}>
             <span className={styles.emailLabel}>Hate contact forms?</span>

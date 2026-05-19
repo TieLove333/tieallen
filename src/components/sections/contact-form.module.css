@@ -33,6 +33,10 @@
   max-width: 360px;
 }
 
+.plannerBtn {
+  align-self: flex-start;
+}
+
 .emailFallback {
   display: flex;
   align-items: baseline;

@@ -53,17 +53,15 @@
 
 /* Variants */
 .variantDefault {
-  background: linear-gradient(to bottom, #ffffff 60%, #e2e8f3 100%);
-  color: var(--brand-dark-blue, #0f3460);
-  border-color: rgba(15, 52, 96, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.variantDefault:hover {
   background: var(--brand-orange);
   color: #ffffff;
   border-color: transparent;
-  box-shadow: 0 8px 24px -8px rgba(255, 107, 107, 0.35);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.25);
+}
+
+.variantDefault:hover {
+  background: #ff5252;
+  box-shadow: 0 8px 24px -8px rgba(255, 107, 107, 0.45);
 }
 
 .variantDark {
