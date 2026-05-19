@@ -28,8 +28,7 @@ const tabs = [
     title: "Brand Identity",
     timeline: "2–3 Weeks",
     price: "$7,500+",
-    suffix: "one-time",
-    description: "A complete visual identity system built to establish immediate authority, win absolute trust, and outclass your competitors.",
+    description: "A complete visual identity system. Logo, type, color, and the rules that make the brand hold up everywhere you put it.",
     features: [
       "Custom brand strategy & discovery",
       "Premium logo design, marks & variations",
@@ -44,14 +43,13 @@ const tabs = [
     title: "Web Design & Dev",
     timeline: "3–4 Weeks",
     price: "$10,000+",
-    suffix: "one-time",
-    description: "Elite-tier, high-conversion marketing websites. Designed to leave a lasting impression and engineered to convert traffic into revenue.",
+    description: "Marketing websites built to convert. Strategy, design, and development in one shop — so the brand voice carries through every pixel.",
     features: [
-      "Custom strategy, wireframing & UX maps",
-      "High-fidelity visual design & art direction",
-      "Responsive custom frontend development",
-      "Sleek micro-animations & premium interactions",
-      "Full SEO foundation & analytics tracking setup",
+      "Strategy, wireframes, and UX mapping",
+      "High-fidelity visual design and art direction",
+      "Responsive frontend, custom-built",
+      "Subtle motion and micro-interactions",
+      "SEO foundation and analytics setup",
     ],
   },
   {
@@ -60,14 +58,13 @@ const tabs = [
     title: "Marketing Funnel",
     timeline: "2–3 Weeks",
     price: "$5,500+",
-    suffix: "one-time",
-    description: "End-to-end customer acquisition and automation engines. Turn visitors into qualified leads and automatic booked calls.",
+    description: "End-to-end acquisition systems. The page, the sequences, the CRM, and the analytics — wired together so traffic turns into booked calls without you touching it.",
     features: [
-      "High-conversion lead magnet & landing page",
-      "Automated marketing sequences & follow-ups",
-      "Full CRM configuration (Vizon OS integrated)",
-      "Conversion tracking & dashboard analytics",
-      "Custom copywriting & conversion flow strategy",
+      "Landing page built for one conversion",
+      "Email/SMS sequences and follow-up automation",
+      "Full CRM setup (Vizon OS integrated)",
+      "Conversion tracking and reporting",
+      "Copy and conversion strategy",
     ],
   },
   {
@@ -75,15 +72,14 @@ const tabs = [
     label: "SaaS Dev",
     title: "SaaS & Custom Platform",
     timeline: "Ongoing / Custom",
-    price: "Retainer Model",
-    suffix: "or custom scope",
-    description: "From first screen design to full-scale platform development. Custom-engineered databases, secure user management, and modern user experiences.",
+    price: "$25,000+",
+    description: "Full-stack product builds. From first wireframe to deployed platform — design, database, auth, and the user experience that holds it all together.",
     features: [
-      "Strategic product planning & database mapping",
-      "High-fidelity SaaS design & screen layout mapping",
-      "Full-stack custom development (Next.js & modern frameworks)",
-      "Secure user authentication & membership dashboards",
-      "Ongoing strategic feature releases & scaling models",
+      "Product strategy and database architecture",
+      "High-fidelity SaaS design and screen mapping",
+      "Full-stack development (Next.js, modern frameworks)",
+      "Authentication, user management, dashboards",
+      "Iteration cycles and scaling support",
     ],
   },
 ];
@@ -113,16 +109,16 @@ function getRetainerTier(tasks: number): RetainerTier {
   if (tasks === 1) return {
     badge: "Standard",
     subtitle: "One active task at a time",
-    description: "Steady daily execution on design and development. Perfect for continuous campaigns, iterations, and ongoing product work.",
-    price: "$6,500",
+    description: "Steady, ongoing execution. One craftsman embedded with your team for whatever's next — design, dev, brand, all of it.",
+    price: "$7,199",
     suffix: "/ month",
     isCustom: false,
   };
   if (tasks === 2) return {
     badge: "Accelerated",
     subtitle: "Two active tasks in parallel",
-    description: "Dedicated parallel bandwidth — run simultaneous brand, web, and dev workstreams without the back-and-forth of a full agency.",
-    price: "$9,500",
+    description: "Multiple workstreams running in parallel. Brand, web, and dev moving at the same time without the agency overhead.",
+    price: "$10,199",
     suffix: "/ month",
     isCustom: false,
   };
@@ -212,7 +208,7 @@ export default function PricingV2() {
                 </div>
               </div>
               <div className={styles.ctaBlock}>
-                <Button label="Submit Planner" href="/start" variant="dark" size="md" />
+                <Button label="Submit Project" href="/start" variant="dark" size="md" />
                 <Button label="Book Call" href="/book" variant="light" size="md" />
               </div>
             </div>
