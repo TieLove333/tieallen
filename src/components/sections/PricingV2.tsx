@@ -72,7 +72,7 @@ const tabs = [
     label: "Web Apps",
     title: "Web App",
     timeline: "Custom",
-    price: "$25,000+",
+    price: "$15,000+",
     description: "Full-stack product builds. From first wireframe to deployed platform - design, database, auth, and the user experience that holds it all together.",
     features: [
       "Product strategy and database architecture",
@@ -109,7 +109,7 @@ function getRetainerTier(tasks: number): RetainerTier {
     badge: "Standard",
     subtitle: "One active task at a time",
     description: "Steady, ongoing execution. One craftsman embedded with your team for whatever's next - design, dev, brand, all of it.",
-    price: "$7,199",
+    price: "$6,299",
     suffix: "/ month",
     isCustom: false,
   };
@@ -117,7 +117,7 @@ function getRetainerTier(tasks: number): RetainerTier {
     badge: "Accelerated",
     subtitle: "Two active tasks in parallel",
     description: "Multiple workstreams running in parallel. Brand, web, and dev moving at the same time without the agency overhead.",
-    price: "$10,199",
+    price: "$9,299",
     suffix: "/ month",
     isCustom: false,
   };
@@ -270,26 +270,20 @@ export default function PricingV2() {
             </div>
 
             <div className={styles.rightPane}>
-              <div className={`${styles.priceCard} ${retainer.isCustom ? styles.priceCardCustom : styles.priceCardRetainer}`} style={retainer.isCustom ? {} : { background: "var(--brand-orange)" }}>
+              <div className={`${styles.priceCard} ${styles.priceCardRetainer}`} style={{ background: "var(--brand-orange)" }}>
                 <div className={styles.priceCardTab} aria-hidden="true" />
                 <div className={styles.priceCardAccent} aria-hidden="true" />
                 <span className={styles.priceCardLogo} aria-hidden="true">tie<span className={styles.priceCardLogoDot}>.</span></span>
                 <div className={styles.priceCardBottom}>
                   <span className={styles.priceLabel}>Monthly Retainer</span>
-                  <span className={`${styles.price} ${retainer.isCustom ? styles.priceCustom : ""}`}>
-                    {retainer.price}
+                  <span className={styles.price}>
+                    {retainer.isCustom ? "Let's talk" : retainer.price}
                   </span>
                 </div>
               </div>
               <div className={styles.ctaBlock}>
-                {retainer.isCustom ? (
-                  <Button label="Book a Call" href="/book" variant="dark" size="md" />
-                ) : (
-                  <>
-                    <Button label="Submit Project" href="/start" variant="dark" size="md" />
-                    <Button label="Book Call" href="/book" variant="light" size="md" />
-                  </>
-                )}
+                <Button label="Submit Project" href="/start" variant="dark" size="md" />
+                <Button label="Book Call" href="/book" variant="light" size="md" />
               </div>
             </div>
           </div>
