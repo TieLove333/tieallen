@@ -60,8 +60,10 @@
 }
 
 .variantDefault:hover {
-  background: #f0f4ff;
-  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.25);
+  background: var(--brand-orange);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 8px 24px -8px rgba(255, 107, 107, 0.35);
 }
 
 .variantDark {
@@ -70,8 +72,8 @@
 }
 
 .variantDark:hover {
-  background-color: #0d2a4d;
-  box-shadow: 0 12px 32px -12px rgba(15, 52, 96, 0.35);
+  background-color: var(--brand-orange);
+  box-shadow: 0 12px 32px -12px rgba(255, 107, 107, 0.35);
 }
 
 .variantLight {
@@ -81,7 +83,9 @@
 }
 
 .variantLight:hover {
-  background-color: var(--bg-secondary);
+  background-color: var(--brand-orange);
+  color: #ffffff;
+  border-color: transparent;
 }
 
 /* Disabled */

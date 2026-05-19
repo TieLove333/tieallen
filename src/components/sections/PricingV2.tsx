@@ -23,21 +23,6 @@ function ClockIcon() {
 
 const tabs = [
   {
-    id: "branding",
-    label: "Branding",
-    title: "Brand Identity",
-    timeline: "2–3 Weeks",
-    price: "$7,500+",
-    description: "A complete visual identity system. Logo, type, color, and the rules that make the brand hold up everywhere you put it.",
-    features: [
-      "Custom brand strategy & discovery",
-      "Premium logo design, marks & variations",
-      "Curated color systems & premium typography",
-      "Brand style guidelines & system application",
-      "Social media, business cards & collateral assets",
-    ],
-  },
-  {
     id: "website",
     label: "Website",
     title: "Web Design & Dev",
@@ -53,11 +38,26 @@ const tabs = [
     ],
   },
   {
+    id: "branding",
+    label: "Branding",
+    title: "Brand Identity",
+    timeline: "2–3 Weeks",
+    price: "$7,500+",
+    description: "A complete visual identity system. Logo, type, color, and the rules that make the brand hold up everywhere you put it.",
+    features: [
+      "Custom brand strategy & discovery",
+      "Premium logo design, marks & variations",
+      "Curated color systems & premium typography",
+      "Brand style guidelines & system application",
+      "Social media, business cards & collateral assets",
+    ],
+  },
+  {
     id: "funnel",
     label: "Funnel",
     title: "Marketing Funnel",
     timeline: "2–3 Weeks",
-    price: "$5,500+",
+    price: "$7,500+",
     description: "End-to-end acquisition systems. The page, the sequences, the CRM, and the analytics — wired together so traffic turns into booked calls without you touching it.",
     features: [
       "Landing page built for one conversion",
@@ -69,8 +69,8 @@ const tabs = [
   },
   {
     id: "saas",
-    label: "SaaS Dev",
-    title: "SaaS & Custom Platform",
+    label: "Product Dev",
+    title: "Product Development",
     timeline: "Ongoing / Custom",
     price: "$25,000+",
     description: "Full-stack product builds. From first wireframe to deployed platform — design, database, auth, and the user experience that holds it all together.",
@@ -87,13 +87,11 @@ const tabs = [
 const capabilities = [
   "Brand Identity",
   "Web Design & Dev",
-  "Custom Next.js & React",
-  "Figma Design",
+  "UI Design",
+  "Development",
   "CRM & Automations",
   "Conversion Funnels",
-  "SaaS Product Design",
-  "Technical SEO",
-  "Conversion Strategy",
+  "Product Design",
 ];
 
 type RetainerTier = {
@@ -133,7 +131,7 @@ function getRetainerTier(tasks: number): RetainerTier {
 }
 
 export default function PricingV2() {
-  const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const [activeTab, setActiveTab] = useState("website");
   const [tasks, setTasks] = useState(1);
 
   const activeContent = tabs.find(t => t.id === activeTab) ?? tabs[0];
@@ -175,7 +173,6 @@ export default function PricingV2() {
 
           {/* ONE-TIME PROJECT CARD */}
           <div className={styles.horizontalCard}>
-            <div className={styles.cardTopNotch} aria-hidden="true" />
             <div className={styles.cardLeftNotch} aria-hidden="true" />
             <div className={styles.leftPane}>
               <div className={styles.cardHeaderArea}>
@@ -203,7 +200,7 @@ export default function PricingV2() {
                 <div className={styles.priceCardAccent} aria-hidden="true" />
                 <span className={styles.priceCardLogo} aria-hidden="true">tie<span className={styles.priceCardLogoDot}>.</span></span>
                 <div className={styles.priceCardBottom}>
-                  <span className={styles.priceLabel}>Starting at</span>
+                  <span className={styles.priceLabel}>{activeContent.title}</span>
                   <span className={styles.price}>{activeContent.price}</span>
                 </div>
               </div>
@@ -216,7 +213,6 @@ export default function PricingV2() {
 
           {/* RETAINER CARD */}
           <div className={styles.horizontalCard}>
-            <div className={styles.cardTopNotch} aria-hidden="true" />
             <div className={styles.cardLeftNotch} aria-hidden="true" />
             <div className={styles.leftPane}>
               <div className={styles.retainerHeaderStack}>
@@ -282,9 +278,7 @@ export default function PricingV2() {
                 <div className={styles.priceCardAccent} aria-hidden="true" />
                 <span className={styles.priceCardLogo} aria-hidden="true">tie<span className={styles.priceCardLogoDot}>.</span></span>
                 <div className={styles.priceCardBottom}>
-                  <span className={styles.priceLabel}>
-                    {retainer.isCustom ? "Scope-based" : "Retainer Investment"}
-                  </span>
+                  <span className={styles.priceLabel}>Monthly Retainer</span>
                   <span className={`${styles.price} ${retainer.isCustom ? styles.priceCustom : ""}`}>
                     {retainer.price}
                   </span>
@@ -295,7 +289,7 @@ export default function PricingV2() {
                   <Button label="Book a Call" href="/book" variant="dark" size="md" />
                 ) : (
                   <>
-                    <Button label="Apply for Retainer" href="/start" variant="dark" size="md" />
+                    <Button label="Submit Project" href="/start" variant="dark" size="md" />
                     <Button label="Book Call" href="/book" variant="light" size="md" />
                   </>
                 )}
