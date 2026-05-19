@@ -28,7 +28,7 @@ const tabs = [
     title: "Web Design & Dev",
     timeline: "3–4 Weeks",
     price: "$10,000+",
-    description: "Marketing websites built to convert. Strategy, design, and development in one shop — so the brand voice carries through every pixel.",
+    description: "Marketing websites built to convert. Strategy, design, and development in one shop - so the brand voice carries through every pixel.",
     features: [
       "Strategy, wireframes, and UX mapping",
       "High-fidelity visual design and art direction",
@@ -58,7 +58,7 @@ const tabs = [
     title: "Marketing Funnel",
     timeline: "2–3 Weeks",
     price: "$7,500+",
-    description: "End-to-end acquisition systems. The page, the sequences, the CRM, and the analytics — wired together so traffic turns into booked calls without you touching it.",
+    description: "End-to-end acquisition systems. The page, the sequences, the CRM, and the analytics - wired together so traffic turns into booked calls without you touching it.",
     features: [
       "Landing page built for one conversion",
       "Email/SMS sequences and follow-up automation",
@@ -69,11 +69,11 @@ const tabs = [
   },
   {
     id: "saas",
-    label: "Product Dev",
-    title: "Product Development",
-    timeline: "Ongoing / Custom",
+    label: "Web Apps",
+    title: "Web App",
+    timeline: "Custom",
     price: "$25,000+",
-    description: "Full-stack product builds. From first wireframe to deployed platform — design, database, auth, and the user experience that holds it all together.",
+    description: "Full-stack product builds. From first wireframe to deployed platform - design, database, auth, and the user experience that holds it all together.",
     features: [
       "Product strategy and database architecture",
       "High-fidelity SaaS design and screen mapping",
@@ -85,12 +85,13 @@ const tabs = [
 ];
 
 const capabilities = [
-  "Brand Identity",
-  "Web Design & Dev",
+  "Logo",
+  "Websites",
   "UI Design",
-  "Development",
-  "CRM & Automations",
-  "Conversion Funnels",
+  "Web Apps",
+  "CRM & Automation",
+  "Brand Assets",
+  "Funnels",
   "Product Design",
 ];
 
@@ -107,7 +108,7 @@ function getRetainerTier(tasks: number): RetainerTier {
   if (tasks === 1) return {
     badge: "Standard",
     subtitle: "One active task at a time",
-    description: "Steady, ongoing execution. One craftsman embedded with your team for whatever's next — design, dev, brand, all of it.",
+    description: "Steady, ongoing execution. One craftsman embedded with your team for whatever's next - design, dev, brand, all of it.",
     price: "$7,199",
     suffix: "/ month",
     isCustom: false,
@@ -122,7 +123,7 @@ function getRetainerTier(tasks: number): RetainerTier {
   };
   return {
     badge: "Custom",
-    subtitle: "3+ active tasks — full capacity",
+    subtitle: "3+ active tasks - full capacity",
     description: "Full design and development bandwidth locked to you. Scope, pricing, and capacity set to your exact needs.",
     price: "Let's talk",
     suffix: "",
@@ -139,7 +140,7 @@ export default function PricingV2() {
   const displayTasks = tasks >= 3 ? "3+" : String(tasks);
 
   return (
-    <section className={styles.pricingFrame} id="pricing-v2">
+    <section className={styles.pricingFrame} id="pricing">
       <div className={styles.pricing}>
         <div className={styles.topNotch} aria-hidden="true" />
 
@@ -149,7 +150,7 @@ export default function PricingV2() {
             <span className={styles.pricingTitleAccent}>Zero surprises.</span>
           </h2>
           <p className={styles.pricingSubtitle}>
-            One-time scoped projects or a monthly retainer. Pick what fits — or start with a project and stay on.
+            One-time scoped projects or a monthly retainer. Pick what fits - or start with a project and stay on.
           </p>
         </div>
 
@@ -217,9 +218,6 @@ export default function PricingV2() {
               <div className={styles.retainerHeaderStack}>
                 <div className={styles.retainerTitleRow}>
                   <h3 className={styles.cardTitle}>Monthly Retainer</h3>
-                  {!retainer.isCustom && (
-                    <span className={styles.retainerTierBadge}>{retainer.badge}</span>
-                  )}
                 </div>
 
                 <p className={styles.description}>{retainer.description}</p>

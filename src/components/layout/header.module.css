@@ -243,7 +243,7 @@
   /* two columns: left list + right CTA */
   display: grid;
   grid-template-columns: 1fr 200px;
-  width: 540px;
+  width: 660px;
   background: #ffffff;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
